@@ -1,24 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Virtual labs</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
+<body class="container" display: flex align-bottom>
 
-<select name="selection" id="languages" onchange="selection()"  >
-<option value="selectLanguage" onclick="alertForText()" >---Select Language---</option>
-<option value="English" id="eng" >English</option>
-<option value="Hindi" id="hin">Hindi</option>
+	<select name="selection" id="languages" onchange="selection()" class="align-bottom">
+		<option value="selectLanguage" onclick="alertForText()">---Select Language---</option>
+		<option value="English" id="eng">English</option>
+		<option value="Hindi" id="hin">Hindi</option>
+
+	</select>
+
+	<div class=" container-md">
+		<h5 id="text1" class="text-primary"></h5>
+		<p id="text2"></p>
+	</div>
+
+	<div id="mybuttons" class="d-flex  bd-highlight align-content-stretch container-md"></div>
+
+	<br>
+
+	<p id="sample2" class="container-md"></p>
+
+	<p id="sample" class="text-info display-4 container-md"></p>
+
+	<div id="check1" class="container"></div>
+
+	<div id="reform1" class="container"></div>
+
+	<p id="demo" class="container"></p>
+
+	<br>
+
+	<div id="check2" class="container"></div>
 
 
+	<p id="demo1" class="container"></p>
 
+	<h6 id="display" class="readMore"></h6>
 
-</select>
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
 
-
-
-<h3 id="text1"></h3>
-<h4 id="text2"></h4>
-<script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
