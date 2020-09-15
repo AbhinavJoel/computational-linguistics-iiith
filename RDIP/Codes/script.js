@@ -141,7 +141,7 @@ function checking1() {
 			if (!document.getElementById("reform")) {
 
 				var x2 = document.createElement("BUTTON");
-				var t2 = document.createTextNode("Reform the Sentence");
+				var t2 = document.createTextNode("Re-form the Sentence");
 				x2.appendChild(t2);
 				x2.id = "reform"
 				document.getElementById("reform1").appendChild(x2);
@@ -173,6 +173,7 @@ function showAlert2() {
 	SenShuf1 = SenShuf1.filter((w) => w != event.target.textContent)
 	document.getElementById("check1").innerHTML = ""
 	document.getElementById("demo").innerHTML = ""
+	document.getElementById("demo1").innerHTML = ""
 	document.getElementById("check2").innerHTML = ""
 	document.getElementById("display").innerHTML = ""
 }
@@ -180,7 +181,7 @@ function showAlert2() {
 function checkcorrectness1() {
 	if (!document.getElementById("reform20")) {
 		var tp = document.createElement("BUTTON");
-		var tpt = document.createTextNode("check correctness");
+		var tpt = document.createTextNode("Check the correctness of this sentence");
 		tp.appendChild(tpt);
 		document.getElementById("check1").appendChild(tp);
 		tp.id = "reform20"
@@ -191,10 +192,10 @@ function checkcorrectness1() {
 }
 function checkcorrectness2() {
 	if (engCorpus.some((sen) => sen == selectedWords1.join(" "))) {
-		document.getElementById("demo").textContent = "It's Correct";
+		document.getElementById("demo").textContent = "Right answer!!!";
 	}
 	else {
-		document.getElementById("demo").textContent = "It's wrong";
+		document.getElementById("demo1").textContent = "Wrong answer!!!";
 		getcorrect()
 	}
 }
@@ -216,7 +217,7 @@ function checking2() {
 			if (!document.getElementById("reform")) {
 
 				var x2 = document.createElement("BUTTON");
-				var t2 = document.createTextNode("Reform the Sentence");
+				var t2 = document.createTextNode("Re-form the Sentence");
 				x2.appendChild(t2);
 				x2.id = "reform"
 				document.getElementById("reform1").appendChild(x2);
@@ -249,13 +250,14 @@ function showAlert3() {
 	document.getElementById("check2").innerHTML = ""
 	document.getElementById("display").innerHTML = ""
 	document.getElementById("demo").innerHTML = ""
+	document.getElementById("demo1").innerHTML = ""
 	SenShuf2 = SenShuf2.filter((w) => w != event.target.textContent)
 }
 
 function checkcorrectness3() {
 
 	var tp2 = document.createElement("BUTTON");
-	var tpt2 = document.createTextNode("check correctness");
+	var tpt2 = document.createTextNode("Check the correctness of this sentence");
 	tp2.appendChild(tpt2);
 	document.getElementById("check1").appendChild(tp2);
 
@@ -265,10 +267,10 @@ function checkcorrectness3() {
 
 function checkcorrectness4() {
 	if (hinCorpus.some((sen) => sen == selectedWords2.join(" "))) {
-		document.getElementById("demo").textContent = "It's Correct";
+		document.getElementById("demo").textContent = "Right answer!!!";
 	}
 	else {
-		document.getElementById("demo").textContent = "It's wrong";
+		document.getElementById("demo1").textContent = "Wrong answer!!!";
 		getcorrect2()
 	}
 }
