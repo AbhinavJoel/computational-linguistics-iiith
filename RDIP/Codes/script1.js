@@ -24,6 +24,7 @@ function selection() {
 function createButton1() {
     document.getElementById("placeButton1").innerHTML = ""
     document.getElementById("correct1").innerHTML = ""
+    document.getElementById("wrong").innerHTML = ""
     document.getElementById("placeButton2").innerHTML = ""
     document.getElementById("placeButton2").innerHTML = ""
     document.getElementById("finalText").innerHTML = ""
@@ -33,6 +34,7 @@ function createButton1() {
     document.getElementById("noOfTokens").value = ""
     document.getElementById("noOfTypes").value = ""
     document.getElementById("correct2").innerHTML = ""
+    document.getElementById("wrong2").innerHTML = ""
     document.getElementById("noOfTokens").style.background = "white";
     document.getElementById("noOfTypes").style.background = "white"
     var T = document.getElementById("table1");
@@ -85,6 +87,7 @@ function calAnswer1() {
         document.getElementById("noOfTokens").style.background = "green";
         document.getElementById("noOfTypes").style.background = "green"
         document.getElementById("placeButton1").innerHTML = ""
+        document.getElementById("wrong").innerHTML = ""
         var x = document.createElement("BUTTON");
         var t = document.createTextNode("Submit");
         x.id = "button1"
@@ -98,7 +101,8 @@ function calAnswer1() {
         x1.onclick = calc;
     }
     else {
-        document.getElementById("correct1").innerHTML = "Wrong Answer"
+        document.getElementById("correct1").innerHTML = ""
+        document.getElementById("wrong").innerHTML = "Wrong Answer"
         document.getElementById("noOfTokens").style.background = "red";
         document.getElementById("noOfTypes").style.background = "red"
     }
@@ -125,18 +129,18 @@ function calc() {
 
 }
 
-function finalFun()  {
+function finalFun() {
     var maxx = []
-var stemmer = new Snowball('English');
-for (i in corpus1Tokens) {
-    stemmer.setCurrent(corpus1Tokens[i]);
-    stemmer.stem();
-    maxx.push((stemmer.getCurrent(corpus1Tokens[i])))
+    var stemmer = new Snowball('English');
+    for (i in corpus1Tokens) {
+        stemmer.setCurrent(corpus1Tokens[i]);
+        stemmer.stem();
+        maxx.push((stemmer.getCurrent(corpus1Tokens[i])))
 
 
-}
+    }
 
-var outputcorpus1Tokens = [];
+    var outputcorpus1Tokens = [];
     var count = 0;
     var start = false;
 
@@ -156,14 +160,16 @@ var outputcorpus1Tokens = [];
     }
 
     finalvalue = document.getElementById("finalv").value
-    if (finalvalue == outputcorpus1Tokens.length){
-    document.getElementById("correct2").innerHTML = "Right Answer"
-    document.getElementById("finalv").style.background = "green";
+    if (finalvalue == outputcorpus1Tokens.length) {
+        document.getElementById("wrong2").innerHTML = ""
+        document.getElementById("correct2").innerHTML = "Right Answer"
+        document.getElementById("finalv").style.background = "green";
     }
-    else{
-    document.getElementById("correct2").innerHTML = "Wrong Answer"
-    document.getElementById("finalv").style.background = "red";
-}
+    else {
+        document.getElementById("correct2").innerHTML = ""
+        document.getElementById("wrong2").innerHTML = "Wrong Answer"
+        document.getElementById("finalv").style.background = "red";
+    }
 }
 
 
@@ -171,6 +177,7 @@ var outputcorpus1Tokens = [];
 function createButton2() {
     document.getElementById("placeButton1").innerHTML = ""
     document.getElementById("correct1").innerHTML = ""
+    document.getElementById("wrong").innerHTML = ""
     document.getElementById("placeButton2").innerHTML = ""
     document.getElementById("placeButton2").innerHTML = ""
     document.getElementById("finalText").innerHTML = ""
@@ -180,6 +187,7 @@ function createButton2() {
     document.getElementById("noOfTokens").value = ""
     document.getElementById("noOfTypes").value = ""
     document.getElementById("correct2").innerHTML = ""
+    document.getElementById("wrong2").innerHTML = ""
     document.getElementById("noOfTokens").style.background = "white";
     document.getElementById("noOfTypes").style.background = "white"
     var T = document.getElementById("table1");
@@ -227,6 +235,7 @@ function calAnswer2() {
         document.getElementById("noOfTokens").style.background = "green";
         document.getElementById("noOfTypes").style.background = "green"
         document.getElementById("placeButton1").innerHTML = ""
+        document.getElementById("wrong").innerHTML = ""
         var xt = document.createElement("BUTTON");
         var tt = document.createTextNode("Submit");
         xt.id = "button1"
@@ -239,7 +248,8 @@ function calAnswer2() {
         x1t.onclick = calc2;
     }
     else {
-        document.getElementById("correct1").innerHTML = "Wrong Answer"
+        document.getElementById("correct1").innerHTML = ""
+        document.getElementById("wrong").innerHTML = "Wrong Answer"
         document.getElementById("noOfTokens").style.background = "red";
         document.getElementById("noOfTypes").style.background = "red"
     }
@@ -267,16 +277,16 @@ function calc2() {
 
 function finalFun2() {
     var maxx = []
-var stemmer = new Snowball('English');
-for (i in corpus2Tokens) {
-    stemmer.setCurrent(corpus2Tokens[i]);
-    stemmer.stem();
-    maxx.push((stemmer.getCurrent(corpus2Tokens[i])))
+    var stemmer = new Snowball('English');
+    for (i in corpus2Tokens) {
+        stemmer.setCurrent(corpus2Tokens[i]);
+        stemmer.stem();
+        maxx.push((stemmer.getCurrent(corpus2Tokens[i])))
 
 
-}
+    }
 
-var outputcorpus2Tokens = [];
+    var outputcorpus2Tokens = [];
     var count = 0;
     var start = false;
 
@@ -296,14 +306,16 @@ var outputcorpus2Tokens = [];
     }
 
     finalvalue = document.getElementById("finalv").value
-    if (finalvalue == outputcorpus2Tokens.length){
-    document.getElementById("correct2").innerHTML = "Right Answer"
-    document.getElementById("finalv").style.background = "green";
+    if (finalvalue == outputcorpus2Tokens.length) {
+        document.getElementById("wrong2").innerHTML = ""
+        document.getElementById("correct2").innerHTML = "Right Answer"
+        document.getElementById("finalv").style.background = "green";
     }
-    else{
-    document.getElementById("correct2").innerHTML = "Wrong Answer"
-    document.getElementById("finalv").style.background = "red";
-}
+    else {
+        document.getElementById("correct2").innerHTML = ""
+        document.getElementById("wrong2").innerHTML = "Wrong Answer"
+        document.getElementById("finalv").style.background = "red";
+    }
 }
 
 
@@ -311,6 +323,7 @@ var outputcorpus2Tokens = [];
 function createButton3() {
     document.getElementById("placeButton1").innerHTML = ""
     document.getElementById("correct1").innerHTML = ""
+    document.getElementById("wrong").innerHTML = ""
     document.getElementById("placeButton2").innerHTML = ""
     document.getElementById("placeButton2").innerHTML = ""
     document.getElementById("finalText").innerHTML = ""
@@ -320,6 +333,7 @@ function createButton3() {
     document.getElementById("noOfTokens").value = ""
     document.getElementById("noOfTypes").value = ""
     document.getElementById("correct2").innerHTML = ""
+    document.getElementById("wrong2").innerHTML = ""
     document.getElementById("noOfTokens").style.background = "white";
     document.getElementById("noOfTypes").style.background = "white"
     var T = document.getElementById("table1");
@@ -369,6 +383,7 @@ function calAnswer3() {
         document.getElementById("noOfTokens").style.background = "green";
         document.getElementById("noOfTypes").style.background = "green"
         document.getElementById("placeButton1").innerHTML = ""
+        document.getElementById("wrong").innerHTML = ""
         var xt = document.createElement("BUTTON");
         var tt = document.createTextNode("Submit");
         xt.id = "button1"
@@ -381,7 +396,8 @@ function calAnswer3() {
         x1t.onclick = calc3;
     }
     else {
-        document.getElementById("correct1").innerHTML = "Wrong Answer"
+        document.getElementById("correct1").innerHTML = ""
+        document.getElementById("wrong").innerHTML = "Wrong Answer"
         document.getElementById("noOfTokens").style.background = "red";
         document.getElementById("noOfTypes").style.background = "red"
     }
@@ -409,18 +425,18 @@ function calc3() {
 }
 
 
-function finalFun3(){
+function finalFun3() {
     var maxx = []
-var stemmer = new Snowball('English');
-for (i in corpus3Tokens) {
-    stemmer.setCurrent(corpus3Tokens[i]);
-    stemmer.stem();
-    maxx.push((stemmer.getCurrent(corpus3Tokens[i])))
+    var stemmer = new Snowball('English');
+    for (i in corpus3Tokens) {
+        stemmer.setCurrent(corpus3Tokens[i]);
+        stemmer.stem();
+        maxx.push((stemmer.getCurrent(corpus3Tokens[i])))
 
 
-}
+    }
 
-var outputcorpus3Tokens = [];
+    var outputcorpus3Tokens = [];
     var count = 0;
     var start = false;
 
@@ -439,13 +455,15 @@ var outputcorpus3Tokens = [];
         count = 0;
     }
 
-finalvalue = document.getElementById("finalv").value
-if (finalvalue == outputcorpus3Tokens.length){
-    document.getElementById("correct2").innerHTML = "Right Answer"
-    document.getElementById("finalv").style.background = "green";
-}
-else{
-    document.getElementById("correct2").innerHTML = "Wrong Answer"
-    document.getElementById("finalv").style.background = "red";
-}
+    finalvalue = document.getElementById("finalv").value
+    if (finalvalue == outputcorpus3Tokens.length) {
+        document.getElementById("wrong2").innerHTML = ""
+        document.getElementById("correct2").innerHTML = "Right Answer"
+        document.getElementById("finalv").style.background = "green";
+    }
+    else {
+        document.getElementById("correct2").innerHTML = ""
+        document.getElementById("wrong2").innerHTML = "Wrong Answer"
+        document.getElementById("finalv").style.background = "red";
+    }
 }

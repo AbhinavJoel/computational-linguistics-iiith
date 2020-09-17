@@ -25,43 +25,59 @@
         #placeButton1 {
             text-align: center;
         }
-        #correct1{
+
+        #correct1 {
             text-align: center;
         }
-        #wrong1{
+
+        #wrong1 {
             text-align: center;
         }
-        #placeButton2{
+
+        #placeButton2 {
             text-align: center;
         }
-        #finalText{
+
+        #finalText {
             text-align: center;
         }
-        #finalT{
+
+        #finalT {
             text-align: center;
         }
-        #newTypes{
+
+        #newTypes {
             display: inline-block;
         }
-        #finall{
+
+        #finall {
             margin: 0 auto;
             text-align: center;
         }
-        #placeButton3{
-            text-align: center;
-            
-        }
-        #selec{
+
+        #placeButton3 {
             text-align: center;
 
         }
-        #corpuses{
+
+        #selec {
             text-align: center;
+
         }
-        #correct2{
+
+        #corpuses {
             text-align: center;
         }
 
+        #correct2 {
+            text-align: center;
+        }
+        #wrong{
+            text-align: center;
+        }
+        #wrong2{
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -69,13 +85,13 @@
     <br>
     <div id="selec" class=" justify-content-center mx-auto"></div>
     <select name="selection" id="corpuses" onchange="selection()" class=" justify-content-center mx-auto justify-content: space-between;
-    align-items: center;" >
+    align-items: center;">
         <option value="selectCorpus">---Select a Corpus---</option>
         <option value="Corpus1" id="Corpus1">Corpus 1</option>
         <option value="Corpus2" id="Corpus2">Corpus 2</option>
         <option value="Corpus3" id="Corpus3">Corpus 3</option>
     </select>
-</div>
+    </div>
     <p id="text1" class="container-md"></p>
     <br>
     <p id="line1" class="container-md"></p>
@@ -97,28 +113,29 @@
     <br>
     <div id="placeButton1"></div>
     <br>
-    <p id="correct1" class="container text-info"></p>
-
-
+    <p id="correct1" class="container text-success"></p>
+    <p id="wrong" class="container text-danger"></p>
     <div id="placeButton2"></div>
 
 
     <p id="finalText"></p>
     <p id="finalT"></p>
-    <div id="finall" class=" justify-content-center mx-auto" >
+    <div id="finall" class=" justify-content-center mx-auto">
     </div>
     <br>
     <div id="placeButton3">
 
-       
+
 
     </div>
     <br>
-    <p id="correct2" class="container text-info"></p>
+    <p id="correct2" class="container text-success"></p>
+    <p id="wrong2" class="container text-danger"></p>
+
     <script src="../Libraries/min.js"></script>
     <script type="text/javascript" src="script1.js"></script>
-    
-   
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
